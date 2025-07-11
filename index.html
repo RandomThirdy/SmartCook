@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--! Primary Meta Tags -->
+    <title>Home</title>
+    <meta name="title" content="SmartCook" />
+    <meta
+      name="description"
+      content=""
+    />
+    <!--! Favicon -->
+    <link rel="shortcut icon" href="./assets/images/smartcook title.jpg" type="image/svg+xml" />
+    <!--! Theme JS -->
+    <script src="./assets/js/theme.js"></script>
+    <!--! Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!--! Material Icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0"
+    />
+    <!--! Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!--! Custom JS -->
+    <script src="./assets/js/global.js" type="module"></script>
+    <script src="./assets/js/home.js" type="module"></script>
+  </head>
+
+    <body>
+    
+    <!-- ? === Header === -->
+    <header class="header" data-header>
+      <a href="/" class="logo">
+        <img
+          src="./assets/images/smartcook.png"
+          width="156"
+          height="32"
+          alt="SmarCook"
+          class="logo-light"
+        />
+        <img
+          src="./assets/images/smartcook.png"
+          width="156"
+          height="32"
+          alt="SmartCook"
+          class="logo-dark"
+        />
+      </a>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li>
+            <a href="/" class="navbar-link title-small has-state active">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./recipes.html" class="navbar-link title-small has-state">
+              Menu
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+      <button
+        class="icon-btn theme-switch has-state"
+        aria-pressed="false"
+        aria-label="Toggle light and dark theme"
+        data-theme-btn
+      >
+        <span class="material-symbols-outlined light-icon" aria-hidden="true">
+          light_mode
+        </span>
+        <span class="material-symbols-outlined dark-icon" aria-hidden="true">
+          dark_mode
+        </span>
+      </button>
+      <a href="./about-us.html" class="btn btn-primary has-icon">
+        <span class="material-symbols-outlined" aria-hidden="true">people</span>
+        <span class="span">About us</span>
+      </a>
+    </header>
+
+    <!-- ? === Mobile Nav === -->
+    <nav class="mobile-nav" aria-label="primary">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="./recipes.html" class="nav-link">
+            <span class="item-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">
+                lunch_dining
+              </span>
+            </span>
+            <span class="label-medium">Menu</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" aria-current="true">
+            <span class="item-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">
+                home
+              </span>
+            </span>
+            <span class="label-medium">Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./about-us.html" class="nav-link">
+            <span class="item-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">
+                people
+              </span>
+            </span>
+            <span class="label-medium">About us</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ? === Main === -->
+    <main>
+      
+      <article>
+        <!-- * Hero -->
+        <section class="hero" aria-label="banner">
+          <div class="banner-card">
+            <h1 class="display-large">Discover dishes</h1>
+            <div class="search-wrapper" data-search-form>
+              <span
+                class="material-symbols-outlined leading-icon"
+                aria-hidden="true"
+              >
+                local_dining
+              </span>
+              <input
+                type="search"
+                name="search"
+                aria-label="Search recipes"
+                placeholder="Find recipes..."
+                class="search-field body-medium"
+                data-search-field
+              />
+              <button class="search-submit" aria-label="Submit" data-search-btn>
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  search
+                </span>
+              </button>
+            </div>
+            <p class="label-medium">
+              Discover rich and diverse flavors of all countries and cuisines.
+            </p>
+          </div>
+        </section>
+
+        <!-- * Tab -->
+        <section class="section tab">
+          <div class="container">
+            <div
+              class="tab-list"
+              data-tab-list
+              role="tablist"
+              aria-label="Meal type"
+            >
+              <button
+                class="tab-btn title-small"
+                role="tab"
+                id="tab-1"
+                tabindex="0"
+                aria-controls="panel-1"
+                aria-selected="true"
+                data-tab-btn
+              >
+                Breakfast
+              </button>
+              <button
+                class="tab-btn title-small"
+                role="tab"
+                id="tab-2"
+                tabindex="-1"
+                aria-controls="panel-2"
+                aria-selected="false"
+                data-tab-btn
+              >
+                Lunch
+              </button>
+              <button
+                class="tab-btn title-small"
+                role="tab"
+                id="tab-3"
+                tabindex="-1"
+                aria-controls="panel-3"
+                aria-selected="false"
+                data-tab-btn
+              >
+                Dinner
+              </button>
+              <button
+                class="tab-btn title-small"
+                role="tab"
+                id="tab-4"
+                tabindex="-1"
+                aria-controls="panel-4"
+                aria-selected="false"
+                data-tab-btn
+              >
+                Snack
+              </button>
+              <button
+                class="tab-btn title-small"
+                role="tab"
+                id="tab-5"
+                tabindex="-1"
+                aria-controls="panel-5"
+                aria-selected="false"
+                data-tab-btn
+              >
+                Drinks
+              </button>
+            </div>
+
+            <div
+              class="tab-pannel"
+              role="tabpanel"
+              id="panel-1"
+              aria-labelledby="tab-1"
+              tabindex="0"
+              data-tab-panel
+            ></div>
+
+            <div
+              class="tab-pannel"
+              role="tabpanel"
+              id="panel-2"
+              aria-labelledby="tab-2"
+              tabindex="0"
+              data-tab-panel
+              hidden
+            >
+              Lunch
+            </div>
+
+            <div
+              class="tab-pannel"
+              role="tabpanel"
+              id="panel-3"
+              aria-labelledby="tab-3"
+              tabindex="0"
+              data-tab-panel
+              hidden
+            >
+              Dinner
+            </div>
+
+            <div
+              class="tab-pannel"
+              role="tabpanel"
+              id="panel-4"
+              aria-labelledby="tab-4"
+              tabindex="0"
+              data-tab-panel
+              hidden
+            >
+              Snack
+            </div>
+
+            <div
+              class="tab-pannel"
+              role="tabpanel"
+              id="panel-5"
+              aria-labelledby="tab-5"
+              tabindex="0"
+              data-tab-panel
+              hidden
+            >
+            Drinks
+            </div>
+          </div>
+        </section>
+
+        <!-- * Recipe Slider -->
+        <section
+          class="section slider-section container"
+          aria-labelledby="slider-label-1"
+          data-slider-section
+        ></section>
+
+        <!-- * Recipe Slider -->
+        <section
+          class="section slider-section container"
+          aria-labelledby="slider-label-1"
+          data-slider-section
+        ></section>
+
+        <br><br><br><br><br><br>  
+        <h2 class="section-title display-small" id="tag-label">
+          Famous Asian Restaurant
+        </h2>
+        <br><br><br><br><br><br>  
+
+        <div class="slider-section-z">
+
+          <div class="slider-z">
+            <span style="--1:1;"><img src="assets/images/1.jpg" alt="" data-link="https://www.sezanne.tokyo/"></span>
+            <span style="--1:2;"><img src="assets/images/2.jpg" alt="" data-link="https://www.aoyama-florilege.jp/en/"></span>
+            <span style="--1:3;"><img src="assets/images/3.jpg" alt="" data-link="https://gaggan.com/"></span>
+            <span style="--1:4;"><img src="assets/images/4.jpg" alt="" data-link="https://www.thechairmangroup.com/"></span>
+            <span style="--1:5;"><img src="assets/images/5.jpg" alt="" data-link="https://wingrestaurant.hk/"></span>
+          </div> 
+        </div>
+    <br><br><br><br><br><br>
+    <h2 class="section-title display-small" id="tag-label">
+       Famous French Restaurant
+     </h2>
+     <br><br><br><br><br><br><br>  
+         <div class="slider-section-z">
+           <div class="slider-z">
+             <span style="--1:1;"><img src="assets/images/1.1.webp" alt="" data-link="https://www.breizhcafe.com/le-comptoir-breizh-cafe"></span>
+             <span style="--1:2;"><img src="assets/images/1.2.jpg" alt="" data-link="https://www.hestia-restaurant.com/"></span>
+             <span style="--1:3;"><img src="assets/images/1.3.webp" alt="" data-link="https://www.hyatt.com/"></span>
+             <span style="--1:4;"><img src="assets/images/1.4.jpg"alt="" data-link="https://lechateaubriand.net/"></span>
+             <span style="--1:5;"><img src="assets/images/1.5.jpg" alt="" data-link="https://www.baume-hotel-paris.com/"></span>
+           </div> 
+         </div>
+      </div>
+      <br><br><br><br><br><br><br> 
+        <!-- * Tags -->
+        <section class="section tag" aria-labelledby="tag-label">
+          <div class="container">
+            <h2 class="section-title display-small" id="tag-label">
+              Choose your health preference.
+            </h2>
+            <p class="section-text body-medium">
+              Choosing your health preference is an important step towards
+              achieving a healthier lifestyle.
+            </p>
+            <div class="tag-list">
+              <a
+                href="./recipes.html?health=wheat-free"
+                class="badge-btn body-medium has-state"
+              >
+                Wheat Free
+              </a>
+              <a
+                href="./recipes.html?health=vegetarian"
+                class="badge-btn body-medium has-state"
+              >
+                Vegetarian
+              </a>
+              <a
+                href="./recipes.html?health=vegan"
+                class="badge-btn body-medium has-state"
+              >
+                Vegan
+              </a>
+              
+             
+              <a
+                href="./recipes.html?health=pork-free"
+                class="badge-btn body-medium has-state"
+              >
+                Pork-Free
+              </a>
+             
+              <a
+                href="./recipes.html?health=No-oil-added"
+                class="badge-btn body-medium has-state"
+              >
+                No oil added
+              </a>
+             
+            
+              <a
+                href="./recipes.html?health=low-sugar"
+                class="badge-btn body-medium has-state"
+              >
+                Low Sugar
+              </a>
+             
+              
+            
+              <a
+                href="./recipes.html?health=keto-friendly"
+                class="badge-btn body-medium has-state"
+              >
+                Keto-Friendly
+              </a>
+              
+              <a
+                href="./recipes.html?health=gluten-free"
+                class="badge-btn body-medium has-state"
+              >
+                Gluten-Free
+              </a>
+            
+           
+              <a
+                href="./recipes.html?health=dairy-free"
+                class="badge-btn body-medium has-state"
+              >
+                Dairy-Free
+              </a>
+              
+              <a
+                href="./recipes.html?health=alcohol-free"
+                class="badge-btn body-medium has-state"
+              >
+                Alcohol-Free
+              </a>
+              
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- ? === Footer === -->
+    <footer class="footer">
+      <p class="copyright body-medium">
+        Copyright <span class="current-yr-cp">2024</span> Atip, Decatoria, Manalo
+      </p>
+      <a href="/" class="logo">
+        <img
+          src="./assets/images/smartcook.png"
+          width="156"
+          height="32"
+          alt="SmartCook"
+          class="logo-light"
+        />
+        <img
+          src="./assets/images/smartcook.png"
+          width="156"
+          height="32"
+          alt="SmartCook"
+          class="logo-dark"
+        />
+      </a>
+      <a href="https://www.cvsu-naic.edu.ph/" target="_blank" class="Cvsu">
+        <img
+          src="./assets/images/footer.png"
+          width="90"
+          height="40"
+          loading="lazy"
+          alt="Cvsu"
+        />
+      </a>
+    </footer>
+  </body>
+</html>
